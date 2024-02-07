@@ -1,0 +1,19 @@
+button {
+    color: white;
+    background-color: blueviolet;
+}
+
+div {
+    width: 300px;
+}
+
+body {
+    background-color: #A569;
+}
+
+@media screen and (max-width: 767px) {
+    button {
+        display: block;
+    }
+    
+}
