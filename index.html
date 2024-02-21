@@ -10,10 +10,18 @@
 </head>
 
 <body>
-    <input type="text" id="campo">
-    <button onclick="mostrarPantalla()">Imprimir</button>
-    <button onclick="limpiarCampo()">Limpiar</button>
-    <button onclick="cambiarColor()">Cambiar Pagina</button>
+    <label for="">Usuario</label>
+    <input type="text" name="" id="usuario">
+    <label> Contraseña</label>
+    <input type="text" name="" id="contraseña">
+
+    <button onclick="usuarioLogeado()"> Login </button>
+
+    <button onclick="usuarioRegistrado()"> Registrarme </button>
+
+    <div id="mensaje">
+
+    </div>   
     
 </body>
 <script src="script.js"></script>

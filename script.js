@@ -1,19 +1,33 @@
-var cmpTexto=document.getElementById("campo");
+var usuario=document.getElementById("usuario");
+var contraseña=document.getElementById("contraseña");
+var currentDiv = document.getElementById("mensaje");
 
-function mostrarPantalla(){
-    alert(cmpTexto.value);
+function usuarioRegistrado(){
+    limpiaCampo();
+    currentDiv.innerHTML="";
+    var usuario=document.getElementById("usuario");
+    var newDiv= document.createElement("div");
+    var newContent = document.createTextNode("Registro con éxito " + usuario.value);
+    newDiv.appendChild(newContent);
+    currentDiv.appendChild(newDiv);
+    limpiarCampos();
 }
 
-function limpiarCampo(){
-    cmpTexto.value="";
-}
-
-function obtenerNumero(){
-    var newRandomColor = Math.floor(Math.random()*16777215).toString(16);
-    return newRandomColor;
-}
-
-function cambiarColor(){
-    var color = "#"+obtenerNumero();
-    document.body.style.backgroundColor = color;
-}
+    function usuarioLogeado(){
+        currentDiv.innerHTML="";
+        var usuario=document.getElementById("usuario");
+        var newDiv= document.createElement("div");
+        var newContent = document.createTextNode("Inicio sesión con éxito " + usuario.value);
+        newDiv.appendChild(newContent);
+        currentDiv.appendChild(newDiv);
+        limpiarCampos();
+    }
+    
+    function limpiarCampos(){
+        usuario.value = "";
+        contraseña.value= "";
+    }
+    
+    function limpiaCampo(){
+        document.getElementById("mensaje").value = "";
+    }
