@@ -1,24 +1,4 @@
-#usuario{
+h1,h2{
     text-align: center;
-    display: block;
-    right: 50px;
-
-}
-
-#contraseña{
-    align-items: center;
-    display: block;
-    margin-top: auto;
-
-}
-
-button{
-    padding: 10px;
-    background-color: purple;
-    color: white;
-    text-align: justify;
-    border-radius: 5px;
-    border: 3px;
-    margin: 10px;
-
+    background-color: aqua;
 }

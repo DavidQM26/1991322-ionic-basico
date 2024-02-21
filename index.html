@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 1</title>
-
     <link rel="stylesheet" href="styles.css">
-   
+
 </head>
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Presupuesto</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<body>
-    <label for="">Usuario</label>
-    <input type="text" name="" id="usuario">
-    <label> Contraseña</label>
-    <input type="text" name="" id="contraseña">
+<body>  
 
-    <button onclick="usuarioLogeado()"> Login </button>
-
-    <button onclick="usuarioRegistrado()"> Registrarme </button>
-
-    <div id="mensaje">
-
-    </div>   
+    <h1>Lista de Compras</h1>
+    <ion-input label="Artículo:" id="art"></ion-input>
+    <ion-input label="Monto:" id="mon" type="double"></ion-input>
+    <ion-button onclick="crearLista()">Calcular</ion-button>
     
+    <h2>Ticket de compra</h2>
+    <div id="lista"></div>
+    <div id="total">Total:</div>
 </body>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 <script src="script.js"></script>
 </html>

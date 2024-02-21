@@ -1,33 +1,37 @@
-var usuario=document.getElementById("usuario");
-var contraseña=document.getElementById("contraseña");
-var currentDiv = document.getElementById("mensaje");
+var articulotxt=document.getElementById("art");
+var montotxt=document.getElementById("mon");
+var divtotal = document.getElementById("total");
 
-function usuarioRegistrado(){
-    limpiaCampo();
-    currentDiv.innerHTML="";
-    var usuario=document.getElementById("usuario");
-    var newDiv= document.createElement("div");
-    var newContent = document.createTextNode("Registro con éxito " + usuario.value);
+var articulo = "";
+var monto = 0;
+
+var total = 0;
+
+function crearLista(){
+    var articulotxt=document.getElementById("art");
+    var montotxt = document.getElementById("mon");
+    var newDiv = document.createElement("div");
+    var newContent = document.createTextNode(articulotxt.value+",   "+montotxt.value+"$");
     newDiv.appendChild(newContent);
-    currentDiv.appendChild(newDiv);
-    limpiarCampos();
+    var currentDiv = document.getElementById("lista");
+    document.body.insertBefore(newDiv, currentDiv);
+    sumaProductos();
+    limpiarCasilla();
 }
 
-    function usuarioLogeado(){
-        currentDiv.innerHTML="";
-        var usuario=document.getElementById("usuario");
-        var newDiv= document.createElement("div");
-        var newContent = document.createTextNode("Inicio sesión con éxito " + usuario.value);
-        newDiv.appendChild(newContent);
-        currentDiv.appendChild(newDiv);
-        limpiarCampos();
-    }
+function sumaProductos(){
+    monto = parseInt(montotxt.value);
+    total = total + monto;
+    var newDiv = document.createElement("div");
+    var newContent = document.createTextNode(total);
+    newDiv.appendChild(newContent);
+    var currentDiv = document.getElementById("total");
+    document.body.insertBefore(newDiv, currentDiv);
+}
+
+function limpiarCasilla(){
+    articulotxt.value="";
+    montotxt.value="";
+}
+
     
-    function limpiarCampos(){
-        usuario.value = "";
-        contraseña.value= "";
-    }
-    
-    function limpiaCampo(){
-        document.getElementById("mensaje").value = "";
-    }
