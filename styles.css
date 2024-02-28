@@ -1,4 +1,12 @@
-h1,h2{
+ion-title{
     text-align: center;
-    background-color: aqua;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+ion-col{
+    border-color: black;
+    border: solid 1px;
+    background-color: aquamarine;
+    text-align: center;
 }
