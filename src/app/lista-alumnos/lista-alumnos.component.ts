@@ -9,6 +9,7 @@ export class ListaAlumnosComponent  implements OnInit {
 
   public actionSheetButtons = [
     {
+      
       text: 'Eliminar',
       role: 'destructive',
       data: {
