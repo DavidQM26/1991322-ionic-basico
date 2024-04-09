@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-alumnos.component.scss'],
 })
 export class ListaAlumnosComponent  implements OnInit {
+
   public actionSheetButtons = [
     {
       text: 'Eliminar',
@@ -22,6 +23,7 @@ export class ListaAlumnosComponent  implements OnInit {
       },
     },
   ];
+  
   constructor() { }
 
   ngOnInit() {}
