@@ -1,0 +1,14 @@
+<ion-card *ngFor="let producto of productos">
+  <ion-card-header>
+  <ion-card-title>{{producto.title}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>Precio: ${{producto.price}}</p>
+    <p>Categoria: {{producto.category}}</p>
+    <p>Descripcion: {{producto.description}} </p>
+    <img src="{{producto.image}}" alt="">
+  </ion-card-content>
+
+  
+</ion-card>
